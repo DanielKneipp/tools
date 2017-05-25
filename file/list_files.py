@@ -18,5 +18,5 @@ def write_pth_in_file(out_file_obj, pth):
         out_file_obj.write(pth + '\n')
 
 local_path = realpath(IMGS_PATH)
-with open(join(OUT_FILE_PATH, OUT_FILE_LIST_NAME), 'w') as out_file_obj:
+with open(join(realpath(OUT_FILE_PATH), OUT_FILE_LIST_NAME), 'w') as out_file_obj:
     list_folder(local_path, lambda pth: write_pth_in_file(out_file_obj, pth))
